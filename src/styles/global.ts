@@ -18,4 +18,19 @@ export default createGlobalStyle`
     body {
         background-color: ${(props) => props.theme.colors.background};
     }
+
+    .btn {
+        padding: 5px 20px;
+
+        background-color: ${(props) => props.theme.colors.elements};
+
+        border-radius: 4px;
+        border: none;
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+        cursor: pointer;
+    }
 `;

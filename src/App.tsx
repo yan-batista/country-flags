@@ -9,6 +9,7 @@ import dark from "./styles/themes/dark";
 
 // pages
 import Home from "./pages/Home/Home";
+import CountryDetails from "./pages/CountryDetails";
 
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
@@ -79,6 +80,8 @@ function App() {
                 />
               }
             />
+
+            <Route path="details/:countryName" element={<CountryDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>
