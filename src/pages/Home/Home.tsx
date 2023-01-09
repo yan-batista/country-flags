@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "../components/Card/index";
+import Card from "../../components/Card/index";
 
 import { Container, InputContainer, Input, Select, CardContainer } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

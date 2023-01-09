@@ -8,7 +8,7 @@ import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 
 // pages
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
