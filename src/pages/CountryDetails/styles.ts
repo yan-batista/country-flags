@@ -61,6 +61,10 @@ export const SpecificDetails = styled.div`
 
   .extra-details {
     margin: 25px 0;
+
+    .separationCommaNotOnFirst:not(:first-child)::before {
+      content: ", ";
+    }
   }
 
   @media ${devices.desktop} {
@@ -93,6 +97,7 @@ export const BorderContainer = styled.div`
 
   .border-card {
     margin: 0 8px 8px 0;
+    text-align: center;
   }
 
   @media ${devices.desktop} {
@@ -111,6 +116,11 @@ export const BorderContainer = styled.div`
       display: inline-block;
       height: auto;
       max-width: 400px;
+
+      & > .border-card {
+        min-width: 80px;
+        display: inline-block;
+      }
     }
   }
 `;
