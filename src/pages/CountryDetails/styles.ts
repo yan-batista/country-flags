@@ -15,15 +15,7 @@ export const ButtonContainer = styled(Container)`
 `;
 
 //TEMPORARY VISUALIZER FOR THE FLAG DATA
-export const Flag = styled.div`
-  background-color: red;
-  height: 150px;
-  width: 300px;
-
-  @media ${devices.desktop} {
-    margin-right: 150px;
-  }
-`;
+export const Flag = styled.div``;
 
 // Container > Flag, Country Name
 export const CountryContainer = styled(Container)`
@@ -49,6 +41,10 @@ export const CountryContainer = styled(Container)`
     .details-container {
       width: fit-content;
     }
+
+    .countryFlagImg {
+      margin-right: 150px;
+    }
   }
 `;
 
@@ -57,6 +53,10 @@ export const SpecificDetails = styled.div`
   & p {
     margin: 8px 0;
     font-weight: 600;
+  }
+
+  span {
+    font-weight: 300;
   }
 
   .extra-details {

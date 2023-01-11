@@ -23,6 +23,7 @@ type CountryInfo = {
   region: string;
   capital: string;
   flags: { svg: string; png: string };
+  cca3: string;
 };
 
 function App() {

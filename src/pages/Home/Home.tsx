@@ -14,6 +14,7 @@ type CountryInfo = {
   region: string;
   capital: string;
   flags: { svg: string; png: string };
+  cca3: string;
 };
 
 interface Props {
@@ -63,6 +64,7 @@ const Home: React.FC<Props> = ({ countryData, filterByRegion, filterByName, getA
               region={country.region}
               capital={country.capital}
               name={country.name.common}
+              cca3={country.cca3}
             />
           );
         })}

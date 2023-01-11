@@ -20,6 +20,7 @@ const CountryDetails = () => {
     currencies: { currType: { name: "" } },
     languages: {},
     borders: [],
+    flags: { png: "" },
   });
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const CountryDetails = () => {
   // Get Country data from API get using the country name from parameter
   const getCountry = () => {
     axios
-      .get(`https://restcountries.com/v3.1/name/${params.countryName}`)
+      .get(`https://restcountries.com/v3.1/alpha/${params.countryName}`)
       .then((response) => {
         setCountry(response.data[0]);
       })
@@ -86,22 +87,34 @@ const CountryDetails = () => {
       </ButtonContainer>
 
       <CountryContainer>
-        <Flag />
+        <img src={country.flags.png} className="countryFlagImg" />
 
         <div className="details-container">
           <p className="country-name">{country.name.common}</p>
 
           <SpecificDetails>
             <div className="region-details">
-              <p>Native Name: {country.altSpellings[country.altSpellings.length - 1]}</p>
-              <p>Population: {country.population}</p>
-              <p>Region: {country.region}</p>
-              <p>Sub Region: {country.subregion}</p>
-              <p>Capital: {country.capital}</p>
+              <p>
+                Native Name: <span>{country.altSpellings[country.altSpellings.length - 1]}</span>
+              </p>
+              <p>
+                Population: <span>{country.population}</span>
+              </p>
+              <p>
+                Region: <span>{country.region}</span>
+              </p>
+              <p>
+                Sub Region: <span>{country.subregion}</span>
+              </p>
+              <p>
+                Capital: <span>{country.capital}</span>
+              </p>
             </div>
 
             <div className="extra-details">
-              <p>Top Level Domain: {country.tld}</p>
+              <p>
+                Top Level Domain: <span>{country.tld}</span>
+              </p>
               <p>
                 Currencies: <>{getCurrencies()}</>
               </p>
@@ -113,7 +126,7 @@ const CountryDetails = () => {
 
           <BorderContainer>
             <p className="border-title">Border Countries:</p>
-            <div className="bordering-countries">{getBorders()}</div>
+            <div className="bordering-countries">{country.borders && getBorders()}</div>
           </BorderContainer>
         </div>
       </CountryContainer>
